@@ -21,7 +21,10 @@ function principal()
 	}, 0, "título!")
 
 	if menu == 1 then
-		if gg.alert(deviceID, "copiar") == 1 then gg.copyText(deviceID, false) end
+		local a = gg.alert(deviceID, "copiar")
+		if a == 1 then
+			gg.copyText(deviceID, false)
+		end
 	elseif menu == 2 then
 		if ( ids["Jogo 1"][deviceID] ) then
 			link = "http://google.com"
@@ -43,4 +46,4 @@ while ( true ) do
 		gg.setVisible(false)
 		principal()
 	end
-end￼Enter
+end
