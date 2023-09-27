@@ -16,10 +16,13 @@ local deviceID = dID:getHash()
 
 function principal()
 	local menu = gg.choice({
+		"copiar id",
 		"Jogo 1"
 	}, 0, "título!")
 
 	if menu == 1 then
+		if gg.alert(deviceID, "copiar") == 1 then gg.copyText(deviceID, false) end
+	elseif menu == 2 then
 		if ( ids["Jogo 1"][deviceID] ) then
 			link = "http://google.com"
 
