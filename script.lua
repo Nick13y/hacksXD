@@ -43,4 +43,4 @@ while ( true ) do
 		gg.setVisible(false)
 		principal()
 	end
-end
+end￼Enter
