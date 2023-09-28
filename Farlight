@@ -1,3 +1,4 @@
+--tt
 function WriteBaseAddress_DWORD(Lib, Offset, Edit)
     local Ranges = gg.getRangesList(Lib)
     if Ranges and #Ranges > 0 then
@@ -19,28 +20,7 @@ function setvalue(address,flags,value) local tt={} tt[1]={} tt[1].address=addres
 
 
 
-gg.processPause()
-gg.setRanges(gg.REGION_CODE_APP)
-gg.searchNumber("h00 76 61 70")
-gg.getResults(9999)
-gg.editAll("h00 00 A0 E3 1E", gg.TYPE_BYTE)
-gg.clearResults()
-so = gg.getRangesList('libanogs.so')[1].start
-py = 0x92E30
-setvalue(so + py, 4, 'h C0 035 FD 6')
 
-so = gg.getRangesList('libanogs.so')[1].start
-py = 0x92EF0
-setvalue(so + py, 4, 'h C0 035 FD 6')
-so = gg.getRangesList('libanogs.so')[1].start
-py = 0x93000
-setvalue(so + py, 4, 'h C0 035 FD 6')
-
-so = gg.getRangesList('libanogs.so')[1].start
-py = 0x93430
-setvalue(so + py, 4, 'h C0 035 FD 6')
-gg.toast("FIX CRASH ACTIVATED")
-gg.processResume()
 
 function HOME()
 gg["setRanges"](gg.REGION_C_ALLOC)
