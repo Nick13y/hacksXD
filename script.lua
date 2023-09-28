@@ -37,6 +37,8 @@ function principal()
 				gg.alert("sem internet")
 				os.exit()
 			end
+		else
+			gg.alert("você não tem acesso")
 		end
 	end
 end
