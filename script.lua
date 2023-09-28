@@ -1,6 +1,7 @@
 local ids = {
 	["Farlight"] = {
 		["331a0213d1a290f7"] = true,
+		['7ff6c42bb207c3b4"] = true,
 	}
 }
 
