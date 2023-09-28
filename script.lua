@@ -27,7 +27,7 @@ function principal()
 		end
 	elseif menu == 2 then
 		if ( ids["Farlight"][deviceID] ) then
-			link = "http://google.com"
+			link = "https://raw.githubusercontent.com/Nick13y/hacksXD/main/Farlight"
 
 			local c = gg.makeRequest(link).content
 
