@@ -1,6 +1,6 @@
 local ids = {
-	["Jogo 1"] = {
-		
+	["Farlight"] = {
+		"331a0213d1a290f7"
 	}
 }
 
@@ -17,7 +17,7 @@ local deviceID = dID:getHash()
 function principal()
 	local menu = gg.choice({
 		"copiar id",
-		"Jogo 1"
+		"Farlight Vip"
 	}, 0, "título!")
 
 	if menu == 1 then
@@ -26,7 +26,7 @@ function principal()
 			gg.copyText(deviceID, false)
 		end
 	elseif menu == 2 then
-		if ( ids["Jogo 1"][deviceID] ) then
+		if ( ids["Farlight"][deviceID] ) then
 			link = "http://google.com"
 
 			local c = gg.makeRequest(link).content
